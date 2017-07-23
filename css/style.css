@@ -1,0 +1,171 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+ul{list-style: none;}
+.container{width:80%;margin:auto;}
+.clearfix{clear:both;}
+body{font-family:'Montserrat', sans-serif;}
+.text-center{text-align: center;}
+.kau{font-family: 'Kaushan Script', cursive;}
+.grad{background-image:linear-gradient(to bottom,rgba(244,140,130,0.9),rgba(251,226,137,0.9));}
+/*-----------------
+    Header Start
+-----------------*/
+header{
+    text-transform: uppercase;
+    position:relative;
+    color:white;
+    background-image: url(../images/header.png);
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header nav{position:absolute;margin:20px auto;width:100%;}
+header nav .logo{
+    float:left;
+    font-size:40px;
+    line-height: 40px;
+    font-weight: 900;
+    text-transform: none;
+}
+header nav .menu-nav{
+    line-height: 40px;
+    float:right;
+}
+header nav .menu-nav li {
+    padding:5px 0;
+    float:left;
+}
+header nav .menu-nav li+li{margin-left:30px}
+header nav .menu-nav li.active, header nav .menu-nav li:hover{
+    color:#fce38a;
+    border-bottom:2px solid #fce38a;
+}
+header .slider{padding:80px 0 40px;}
+header .slider .content{    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 600px;
+}
+header .slider .content h1{
+    font-size:100px;
+    font-weight:900;
+    max-width:600px;
+}
+header .slider .content h2 {font-size:40px}
+header .slider .content .hr{
+    width:50px;
+    height: 2px;
+    margin: 50px auto;
+    background: white;
+}
+.learn-more{
+    border:2px solid white;
+    padding:5px 15px;
+}
+header .slider .pointer {
+    width:calc(25% - 24px);
+    float:left;
+}
+header .slider .pointer + .pointer {
+    margin-left:32px;
+}
+header .slider .pointer .number{
+    font-weight: 900;
+    margin-right:5px;
+}
+header .slider .pointer .hr{
+    height:2px;
+    margin:20px 0;
+    background:#CCC;
+}
+header .slider .pointer.active .hr {background:white;}
+header .slider .pointer.active .hr span{
+    background:red;
+    width:50px;
+    height:2px;
+    display:block;
+}
+/*=============
+    Header End
+===============*/
+/*================
+    Story Section
+=================*/
+.story{padding:60px 0 70px;}
+.story h2, .story h3{font-weight:bold}
+.story .hr{height:2px;background:red;width:50px;margin:30px auto;}
+.story .container > p{color:#919191;margin:0 auto 60px;width:70%;min-width:500px;}
+.story .pics>div:not(.clearfix){
+    height:200px;
+    width:calc(33.333333% - 18px);
+    float:left;
+    position:relative;
+}
+.story .pics .img{
+    width:100%;
+    height:100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+}
+.story .pics>div:first-of-type .img{background-image: url(../images/about-1.png);}
+.story .pics>div:nth-of-type(2) .img{background-image: url(../images/about-2.png);}
+.story .pics>div:nth-of-type(3) .img{background-image: url(../images/about-3.png);}
+.story .pics .blue{
+    background:#95e1d3;
+    z-index: -1;
+}
+.story .pics .grad,
+.story .pics .blue{
+    opacity: 0;
+    position: absolute;
+    top:0;
+    width:100%;
+    transition:all 0.3s ease-in-out;
+    height:100%;
+}
+.story .pics > div:hover > .grad,
+.story .pics>div:hover > .blue{
+    opacity:1;
+}
+.story .pics > div:hover > .grad,
+.story .pics > div:hover .img{
+    transform:translate(-5px,-5px);
+}
+.story .pics>div:hover > .blue{
+    transform: translate(5px,5px);
+}
+.story .pics .grad i{display:block;}
+.story .pics .grad {
+    display:flex;
+    color:white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.story .pics>div+div{margin-left:27px;}
+/*================
+statistics section
+=================*/
+.statistics{color:white;background:#95e1d3;}
+.statistics div:not(.clearfix):not(.container){
+    float:left;
+    width:20%;
+    height:265px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.statistics .container div + div{
+    border-left:1px solid rgba(255,255,255,0.8);
+}
+.statistics span:first-of-type{
+    font-size:100px;
+    font-weight: bold;
+}
