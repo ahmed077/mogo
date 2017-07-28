@@ -7,7 +7,7 @@
 ul{list-style: none;}
 .container{width:80%;margin:auto;}
 .clearfix{clear:both;}
-body{font-family:'Montserrat', sans-serif;}
+body{font-family:'Montserrat', sans-serif;font-size:1.2vw}
 .text-center{text-align: center;}
 .kau{font-family: 'Kaushan Script', cursive;}
 .grad{background-image:linear-gradient(to bottom,rgba(244,140,130,0.9),rgba(251,226,137,0.9));}
@@ -55,11 +55,11 @@ header .slider .content{
     height: 600px;
 }
 header .slider .content h1{
-    font-size:100px;
+    font-size:5.5vw;
     font-weight:900;
     max-width:600px;
 }
-header .slider .content h2 {font-size:40px}
+header .slider .content h2 {font-size:3vw}
 header .slider .content .hr{
     width:50px;
     height: 2px;
@@ -217,7 +217,7 @@ statistics section
 .statistics div:not(.clearfix):not(.container){
     float:left;
     width:20%;
-    height:265px;
+    padding:50px 0;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -227,7 +227,7 @@ statistics section
     border-left:1px solid rgba(255,255,255,0.8);
 }
 .statistics span:first-of-type{
-    font-size:100px;
+    font-size:8vw;
     font-weight: bold;
 }
 /*================
@@ -246,6 +246,7 @@ services section
     margin-right:15px;
     color:#95e1d3;
 }
+.services .img i{font-size:4vw}
 .services .info{
     float:left;
     width:calc(80% - 15px);
@@ -294,11 +295,11 @@ services section
     border:1px solid #ccc;
     width:100%;
 }
+.services .tab .title{padding:20px;}
 .services .tab.open .title{
     border-bottom:1px solid #ccc;
 }
 .services .tab .title i:first-of-type, .services .tab .title h3, .services .tab .title i:last-of-type{
-    margin:20px;
     line-height:30px;
 }
 .services .tab .title i:first-of-type{
@@ -307,6 +308,8 @@ services section
 }
 .services .tab .title h3{
     float:left;
+    margin-left: 20px;
+    margin-bottom: 0;
 }
 .services .tab .title i:last-of-type{
     color:#ccc;
@@ -333,13 +336,13 @@ services section
     border: 2px solid #95e1d3;
     width:108px;
     float:left;
-    margin:0 80px;
+    margin:0 6.3%;
 }
 .quote .msg i{color:#95e1d3;}
 .quote .info{
-    margin-right:80px;
+    margin-right:6.3%;
     float:left;
-    width:calc(100% - 348px);    
+    width:calc(81.1% - 108px);    
 }
 .quote .info p{color:#919191;}
 .quote .info .hr{margin-left:0;float:left;}
@@ -349,9 +352,8 @@ services section
     top:50px;
     color:#919191
 }
-.quote .container > i:last-of-type{
-    right:0;
-}
+.quote .container > i.fa-chevron-right{right:0;}
+.quote .container > i.fa-chevron-left{left:0;}
 /* Team Section*/
 .team .pics>div:not(.clearfix){
     height:468px;
@@ -382,7 +384,7 @@ services section
     float:left;
     width:16.6666667%;
 }
-.logo li i{line-height: 108px;font-size:108px;}
+.logo li i{line-height: 108px;font-size:9vw;}
 /*Works Section*/
 .work .pics > div:not(.clearfix){
     height:388px;
@@ -428,7 +430,7 @@ services section
     height:108px;
     width:108px;
     float:left;
-    margin:0 80px;
+    margin:0 6.3%;
 }
 /*clients section*/
 .say{background-image: url(../images/say.png);}
@@ -457,6 +459,11 @@ services section
 .say .client .info{
     float:left;
     width:calc(100% - 160px);
+}
+.say .client .info p {
+    max-height:150px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 .say .client h3{
     margin-bottom:5px;
@@ -526,6 +533,7 @@ services section
     Footer Start
 ===================*/
 footer{
+    font-size:1vw;
     height:650px;
     background:#EEE;
 }
@@ -605,7 +613,6 @@ footer .blogs .img{
 footer .blogs .describtion {
     float:left;
     width:calc(65% - 30px);
-    padding-top:20px;
 }
 footer .blogs .describtion p{
     font-size:12px;
@@ -621,7 +628,7 @@ footer .blogs > div:nth-of-type(2) .img{
 footer .blogs > div:nth-of-type(3) .img{
     background-image: url(../images/footer-blog-3.png);}
 footer .instagram{
-    width:calc(30% - 45px);
+    width:calc(30% - 70px);
     margin-left:15px;
     float:left;
 }
@@ -648,4 +655,37 @@ footer > p {
 }
 footer > p span {
     color:#f38181;
+}
+@media(max-width:991px){
+    body{font-size:1.5vw}
+    header .menu-nav::before{
+        display: block;
+        clear: both;
+        content:"";
+        width:0;
+    }
+    header nav .menu-nav{
+        float:none;
+    }
+    .story .hr, .services .hr, .work .hr, .quote .hr, .team .hr, .say .hr, .blog .hr, .map .hr{width:30px;}
+    footer .social input[type='submit']{
+        font-size: 1vw;
+        height: 100%;
+        padding: 10px;
+    }
+}
+@media(max-width:768px) {
+    .story .container > p, .work .container > p, .services .container > p, .team .container > p{
+        min-width:100%;
+    }
+    .say,.overlay{height:auto}
+    .say .client .img{
+        width:60px;
+        height:60px;
+        border-radius: 50%;
+        margin: 0 10px;
+    }
+    .say .client .info{
+        width:calc(100% - 80px);
+    }
 }
